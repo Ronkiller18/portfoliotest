@@ -1,0 +1,24 @@
+# Linux
+*~
+.Trash-*
+.cache/
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Node.js (if you use it later)
+node_modules/
+
+# Build outputs
+dist/
+build/

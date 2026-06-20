@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming — Rushikesh</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/programming.css">
+</head>
+<body>
+<div class="pg-bg"></div>
+
+<nav class="pg-nav">
+  <a href="index.html" class="pg-nav__home">HOME</a>
+  <div class="pg-nav__title">
+    <div class="pg-nav__title-dot"></div>
+    Programming
+  </div>
+  <div class="pg-nav__arrows">
+    <a href="security.html" class="pg-nav__arrow">← Prev</a>
+    <a href="other.html" class="pg-nav__arrow pg-nav__arrow--primary">Next →</a>
+  </div>
+</nav>
+
+<main class="pg-main">
+  <div class="pg-header">
+    <div class="pg-header__eyebrow">PROGRAMMING</div>
+    <h1 class="pg-header__title">Projects & Applications</h1>
+    <p class="pg-header__sub">Production-quality software built the right way — encrypted, tested, and documented. Security baked in from the start.</p>
+  </div>
+
+  <div class="card-grid">
+
+    <!-- ── Card: LockBox ── -->
+    <div class="card">
+      <span class="card__tag">FULL STACK</span>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <div class="card__status"><span class="card__status-dot"></span>Live · Desktop App</div>
+        <span class="test-badge">55 tests</span>
+      </div>
+      <div class="card__name">LockBox — Password Manager</div>
+      <div class="card__meta">Full-stack desktop application with AES-256 encryption and offline-first architecture. Zero-knowledge design — master password never stored.</div>
+      <div class="card__tech">
+        <span class="card__tech-pill">Python</span>
+        <span class="card__tech-pill">FastAPI</span>
+        <span class="card__tech-pill">AES-256</span>
+        <span class="card__tech-pill">Electron</span>
+        <span class="card__tech-pill">IndexedDB</span>
+        <span class="card__tech-pill">Tailscale</span>
+      </div>
+      <div style="margin-top:4px;">
+        <div class="stack-depth__label" style="font-size:10px;color:var(--text-3);margin-bottom:4px;">Stack depth</div>
+        <div class="stack-depth">
+          <div class="stack-depth__bar"><div class="stack-depth__fill" style="width:92%;"></div></div>
+          <span class="stack-depth__label">Advanced</span>
+        </div>
+      </div>
+      <div class="card__actions">
+        <button class="card__btn" style="grid-column:1/-1;" onclick="openModal('lockbox')">Show details ↓</button>
+        <a href="https://github.com/Ronkiller18/lockbox" target="_blank" rel="noopener noreferrer" class="card__btn">Code</a>
+        <span class="card__btn" style="cursor:default;opacity:0.4;">Desktop only</span>
+      </div>
+    </div>
+
+    <!-- ── Card: Portfolio ── -->
+    <div class="card">
+      <span class="card__tag">FRONTEND</span>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div class="card__status"><span class="card__status-dot"></span>Live · Deployed</div>
+      </div>
+      <div class="card__name">Portfolio Website</div>
+      <div class="card__meta">This site. Multi-page frontend with per-section theming, modal project system, and a D20 dice widget.</div>
+      <div class="card__tech">
+        <span class="card__tech-pill">HTML</span>
+        <span class="card__tech-pill">CSS</span>
+        <span class="card__tech-pill">JavaScript</span>
+      </div>
+      <div style="margin-top:4px;">
+        <div class="stack-depth__label" style="font-size:10px;color:var(--text-3);margin-bottom:4px;">Stack depth</div>
+        <div class="stack-depth">
+          <div class="stack-depth__bar"><div class="stack-depth__fill" style="width:55%;"></div></div>
+          <span class="stack-depth__label">Intermediate</span>
+        </div>
+      </div>
+      <div class="card__actions">
+        <button class="card__btn" onclick="openPreview('https://ronkiller18.github.io/portfolio/')">Preview ↗</button>
+        <a href="https://ronkiller18.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="card__btn card__btn--accent">Live →</a>
+        <a href="https://github.com/Ronkiller18/portfolio" target="_blank" rel="noopener noreferrer" class="card__btn">Code</a>
+        <button class="card__btn" onclick="openModal('portfolio')">Details ↓</button>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROJECT DETAIL TEMPLATES
+════════════════════════════════════════════════════════ -->
+
+<template data-screenshot="assets/images/projects/screenshots/lockbox.png" id="detail-lockbox">
+  <div class="modal__tag">FULL STACK · DESKTOP APP</div>
+  <div class="modal__title">LockBox — Password Manager</div>
+  <div class="modal__desc">Full-stack desktop application with AES-256 encryption and offline-first architecture. Zero-knowledge design — master password never stored anywhere. Built as a daily-use tool where every decision prioritised security over convenience.</div>
+
+  <div class="modal__screenshot-wrap" style="display:none;">
+    <img class="modal__screenshot-slot" src="" alt="">
+  </div>
+<div class="modal__section-title">KEY FEATURES</div>
+  <ul class="modal__bullets">
+    <li>AES-256 encrypted vault with PBKDF2 at 600,000 iterations</li>
+    <li>Zero-knowledge design — master password never stored anywhere</li>
+    <li>Native desktop app via Electron — auto-starts backend, system tray</li>
+    <li>Full offline read/write using IndexedDB as primary store</li>
+    <li>Manual sync between devices with last-write-wins conflict resolution</li>
+    <li>Password generator, strength indicator, and tag-based organisation</li>
+    <li>6 complete UI themes, profile with avatar, and master password change</li>
+    <li>55 automated tests across crypto, vault I/O, and API layers</li>
+  </ul>
+
+  <div class="modal__section-title">IMPLEMENTATION</div>
+  <ul class="modal__bullets">
+    <li>REST API with FastAPI — 10 endpoints including sync and re-encryption</li>
+    <li>Atomic file writes — vault never corrupted on crash</li>
+    <li>Constant-time password comparison to prevent timing attacks</li>
+    <li>Service worker + PWA manifest for browser access</li>
+    <li>Encrypted tunnel access via Tailscale WireGuard VPN</li>
+    <li>Session key lives only in server memory — never written to disk</li>
+    <li>Auto-lock clears session key and IndexedDB cache after inactivity</li>
+  </ul>
+
+  <div class="modal__note">
+    <div class="modal__note-title">🔐 SECURITY NOTES</div>
+    <p>AES-256-CBC + HMAC-SHA256 via Python cryptography library. PBKDF2-HMAC-SHA256 with 600,000 iterations. vault.enc excluded from version control. All device traffic encrypted via Tailscale WireGuard.</p>
+  </div>
+
+  <div class="modal__actions">
+    <a href="https://github.com/Ronkiller18/lockbox" target="_blank" rel="noopener noreferrer" class="modal__link modal__link--accent">View code →</a>
+  </div>
+</template>
+
+<template data-screenshot="assets/images/projects/screenshots/portfolio.png" id="detail-portfolio">
+  <div class="modal__tag">FRONTEND</div>
+  <div class="modal__title">Portfolio Website</div>
+  <div class="modal__desc">This portfolio — a multi-page static site with per-section color theming, a project modal system powered by HTML templates, and an interactive D20 dice widget.</div>
+
+  <div class="modal__screenshot-wrap" style="display:none;">
+    <img class="modal__screenshot-slot" src="" alt="">
+  </div>
+<div class="modal__section-title">KEY FEATURES</div>
+  <ul class="modal__bullets">
+    <li>Multi-page architecture with per-page color accent system</li>
+    <li>Modal project detail viewer driven by HTML &lt;template&gt; tags</li>
+    <li>Interactive D20 dice with 3D tumble animation and 20 random facts</li>
+    <li>Faint radial accent gradient background per project page</li>
+    <li>Asset folder system — screenshots managed separately from code</li>
+    <li>Fully responsive — mobile down to 360px</li>
+  </ul>
+
+  <div class="modal__section-title">IMPLEMENTATION</div>
+  <ul class="modal__bullets">
+    <li>CSS custom properties for per-page accent theming with zero duplication</li>
+    <li>Project data lives in HTML templates, not JavaScript objects</li>
+    <li>projects.js is a lean renderer — reads templates, stamps into modal</li>
+    <li>Vanilla JavaScript only — no frameworks or build tools</li>
+    <li>Static hosting via GitHub Pages</li>
+  </ul>
+
+  <div class="modal__note">
+    <div class="modal__note-title">🔐 SECURITY NOTES</div>
+    <p>Static content reduces attack surface. No user input stored or processed. External links use rel="noopener noreferrer". Template cloning avoids innerHTML with user content.</p>
+  </div>
+
+  <div class="modal__actions">
+    <a href="https://ronkiller18.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="modal__link modal__link--accent">Live site →</a>
+    <a href="https://github.com/Ronkiller18/portfolio" target="_blank" rel="noopener noreferrer" class="modal__link">View code</a>
+  </div>
+</template>
+
+<!-- ── Modal shell ─────────────────────────────────────── -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal__close" onclick="closeModal()">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

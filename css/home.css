@@ -1,0 +1,342 @@
+/* ─── Home Page ─────────────────────────────────────────── */
+:root {
+  --accent:      #5b6af0;
+  --accent-dim:  rgba(91,106,240,0.12);
+  --accent-glow: rgba(91,106,240,0.35);
+}
+
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 48px 20px 80px;
+}
+
+.page { width: min(780px, 100%); }
+
+/* ─── Hero ──────────────────────────────────────────────── */
+.hero-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+.hero-text { flex: 1; }
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--accent);
+}
+.name {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 10px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+.role {
+  font-size: 14px;
+  color: var(--text-2);
+  margin-top: 12px;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+/* ─── Avatar ────────────────────────────────────────────── */
+.avatar-wrap {
+  flex-shrink: 0;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1.5px solid color-mix(in srgb, var(--accent) 50%, var(--border));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 4px;
+}
+.avatar-glow {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(91,106,240,0.45) 0%, transparent 65%);
+  pointer-events: none;
+}
+.avatar-r {
+  font-size: 34px;
+  font-weight: 800;
+  color: #c8cfff;
+  position: relative;
+  z-index: 1;
+  line-height: 1;
+  text-shadow:
+    0 0 6px rgba(91,106,240,1),
+    0 0 18px rgba(91,106,240,0.7),
+    0 0 2px #fff;
+  letter-spacing: -1px;
+}
+
+/* ─── Skills ────────────────────────────────────────────── */
+.skill-row {
+  display: flex;
+  gap: 7px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.skill-pill {
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-2);
+  transition: color .2s, border-color .2s;
+}
+.skill-pill:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ─── CTA ───────────────────────────────────────────────── */
+.cta-row { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+.cta-primary {
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  transition: opacity .2s;
+  display: inline-block;
+}
+.cta-primary:hover { opacity: 0.85; }
+.cta-secondary {
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+  display: inline-block;
+}
+.cta-secondary:hover { color: var(--text); border-color: var(--text-3); }
+
+/* ─── Section title ─────────────────────────────────────── */
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 44px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ─── Explore cards ─────────────────────────────────────── */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.preview-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: border-color .2s, transform .2s;
+}
+.preview-card:hover { border-color: var(--border-2); transform: translateY(-2px); }
+.preview-tag {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 9px;
+  border-radius: 4px;
+  display: inline-block;
+  align-self: flex-start;
+}
+.preview-card-title { font-size: 14px; font-weight: 600; color: var(--text); }
+.preview-card-desc  { font-size: 12px; color: var(--text-3); line-height: 1.5; }
+.preview-card-arrow {
+  font-size: 16px;
+  color: var(--text-3);
+  margin-top: auto;
+  transition: color .2s, transform .2s;
+}
+.preview-card:hover .preview-card-arrow { color: var(--accent); transform: translateX(3px); }
+
+/* ─── About ─────────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 14px;
+  align-items: stretch;
+}
+.about-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px;
+}
+.about-text { font-size: 13.5px; color: var(--text-2); line-height: 1.8; }
+
+/* ─── Dice widget ───────────────────────────────────────── */
+.roller-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.roller-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-3);
+}
+
+/* Die — flat 2D with springy overshoot spin */
+#die {
+  width: 90px;
+  height: 90px;
+  margin: 16px auto 12px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+#die svg {
+  width: 100%; height: 100%;
+  display: block;
+  transition: filter .3s ease;
+}
+
+/* Glow on the hex polygon during roll */
+#die.die-spin svg   { filter: drop-shadow(0 0 8px var(--accent-glow)); }
+#die.die-land svg   { filter: drop-shadow(0 0 4px var(--accent-glow)); transition: filter .6s ease; }
+
+/* Spin: fast multi-rotation with slight scale pop */
+@keyframes dieSpin {
+  0%   { transform: rotate(0deg)   scale(1); }
+  15%  { transform: rotate(120deg) scale(1.08); }
+  50%  { transform: rotate(540deg) scale(1.05); }
+  85%  { transform: rotate(900deg) scale(1.02); }
+  100% { transform: rotate(1080deg) scale(1); }
+}
+
+/* Land: springy overshoot settle — the reference style */
+@keyframes dieLand {
+  0%   { transform: rotate(1080deg) scale(1.1); }
+  55%  { transform: rotate(1074deg) scale(0.94); }
+  75%  { transform: rotate(1082deg) scale(1.03); }
+  88%  { transform: rotate(1078deg) scale(0.98); }
+  100% { transform: rotate(1080deg) scale(1); }
+}
+
+#die.die-spin svg { animation: dieSpin 0.75s cubic-bezier(.4,0,.2,1) forwards; }
+#die.die-land svg { animation: dieLand 0.45s cubic-bezier(.34,1.56,.64,1) forwards; }
+
+/* Number blurs during spin so random flicker looks intentional */
+.die-num {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+  pointer-events: none;
+  transition: filter .15s ease, opacity .15s ease;
+}
+.die-num-blur { filter: blur(2px); opacity: 0.5; }
+
+.roll-btn {
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 22px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: opacity .2s;
+  width: 100%;
+  margin-top: 2px;
+}
+.roll-btn:hover { opacity: 0.85; }
+
+.roll-count {
+  font-size: 10px;
+  color: var(--text-3);
+  margin-top: 8px;
+  min-height: 14px;
+}
+
+.fact-box {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+  min-height: 52px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fact-text       { font-size: 11.5px; color: var(--text-2); line-height: 1.55; text-align: center; }
+.fact-placeholder { color: var(--text-3); font-size: 11px; }
+
+/* ─── Contact ───────────────────────────────────────────── */
+.contact-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.contact-chip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color .2s, border-color .2s;
+}
+.contact-chip:hover { color: var(--text); border-color: var(--accent); }
+.contact-chip svg { width: 15px; height: 15px; opacity: 0.7; }
+
+/* ─── Footer ────────────────────────────────────────────── */
+.footer { margin-top: 56px; text-align: center; font-size: 11.5px; color: var(--text-3); }
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 600px) {
+  body { padding: 32px 16px 60px; }
+  .hero-row { flex-direction: column-reverse; gap: 16px; }
+  .avatar-wrap { width: 60px; height: 60px; }
+  .avatar-r { font-size: 24px; }
+  .name { font-size: 28px; }
+  .preview-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+}

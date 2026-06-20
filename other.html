@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other — Rushikesh</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/other.css">
+</head>
+<body>
+<div class="pg-bg"></div>
+
+<nav class="pg-nav">
+  <a href="index.html" class="pg-nav__home">HOME</a>
+  <div class="pg-nav__title">
+    <div class="pg-nav__title-dot"></div>
+    Other
+  </div>
+  <div class="pg-nav__arrows">
+    <a href="programming.html" class="pg-nav__arrow">← Prev</a>
+    <span class="pg-nav__arrow" style="opacity:0.3;cursor:default;">Next →</span>
+  </div>
+</nav>
+
+<main class="pg-main">
+  <div class="pg-header">
+    <div class="pg-header__eyebrow">OTHER WORK</div>
+    <h1 class="pg-header__title">Games & Experiments</h1>
+    <p class="pg-header__sub">Everything outside the security and programming boxes — games, experiments, and work in progress.</p>
+  </div>
+
+  <div class="card-grid">
+
+    <!-- ── Card: Browser Game ── -->
+    <div class="card">
+      <span class="card__tag fun-tag-mint">GAME</span>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div class="card__status"><span class="card__status-dot card__status-dot--wip"></span>In development</div>
+        <span class="wip-label">WIP</span>
+      </div>
+      <div class="card__name">Browser Game</div>
+      <div class="card__meta">A lightweight offline browser game focused on simple mechanics and smooth performance. Designed to run well on low-end devices.</div>
+      <div class="card__tech">
+        <span class="card__tech-pill">HTML</span>
+        <span class="card__tech-pill">CSS</span>
+        <span class="card__tech-pill">JavaScript</span>
+      </div>
+      <div class="card__actions">
+        <span class="card__btn" style="cursor:default;opacity:0.4;grid-column:1/-1;">Coming soon</span>
+      </div>
+    </div>
+
+    <!-- ── Placeholder slot ── -->
+    <div class="card" style="opacity:0.35;pointer-events:none;">
+      <span class="card__tag fun-tag-magenta">EXPERIMENT</span>
+      <div class="card__status"><span class="card__status-dot card__status-dot--wip"></span>Planned</div>
+      <div class="card__name">Next Experiment</div>
+      <div class="card__meta">Something new is being built here. Check back soon.</div>
+      <div class="card__tech"><span class="card__tech-pill">TBD</span></div>
+      <div class="card__actions">
+        <span class="card__btn" style="cursor:default;grid-column:1/-1;">Coming soon</span>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Templates ready for when projects are added -->
+
+<!-- ── Modal shell ─────────────────────────────────────── -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal__close" onclick="closeModal()">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

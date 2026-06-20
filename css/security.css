@@ -1,0 +1,56 @@
+/* ─── Security Page — Indigo / Blue ─────────────────────── */
+:root {
+  --accent:      #4a6cf7;
+  --accent-dim:  rgba(74,108,247,0.10);
+  --accent-glow: rgba(74,108,247,0.30);
+  --accent-2:    #7b8fff;
+}
+
+/* Card top-bar accent color for security */
+.card::before { background: linear-gradient(90deg, #4a6cf7, #7b8fff); }
+
+/* Security severity badges */
+.badge-high   { background: rgba(239,68,68,0.12);  color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
+.badge-med    { background: rgba(245,158,11,0.12); color: #fbbf24; border: 1px solid rgba(245,158,11,0.25); }
+.badge-low    { background: rgba(74,108,247,0.12); color: #7b8fff; border: 1px solid rgba(74,108,247,0.25); }
+
+.badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* CWE reference chip */
+.cwe-chip {
+  font-size: 10px;
+  color: var(--text-3);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Security-specific modal detail sections */
+.modal__security-note {
+  background: rgba(74,108,247,0.06);
+  border: 1px solid rgba(74,108,247,0.2);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 16px;
+}
+.modal__security-note-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent-2);
+  margin-bottom: 8px;
+}
+.modal__security-note p {
+  font-size: 12.5px;
+  color: var(--text-2);
+  line-height: 1.65;
+}

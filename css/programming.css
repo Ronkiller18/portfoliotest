@@ -1,0 +1,70 @@
+/* ─── Projects Page — Amber / Orange ───────────────────── */
+:root {
+  --accent:      #f07a35;
+  --accent-dim:  rgba(240,122,53,0.10);
+  --accent-glow: rgba(240,122,53,0.28);
+  --accent-2:    #ffaa70;
+}
+
+/* Card top-bar accent for programming */
+.card::before { background: linear-gradient(90deg, #f07a35, #ffaa70); }
+
+/* Stack depth indicator */
+.stack-depth {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+}
+.stack-depth__bar {
+  height: 3px;
+  border-radius: 2px;
+  background: var(--border);
+  flex: 1;
+  overflow: hidden;
+}
+.stack-depth__fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width .6s ease;
+}
+.stack-depth__label {
+  font-size: 10px;
+  color: var(--text-3);
+  white-space: nowrap;
+}
+
+/* Test count badge */
+.test-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--accent-2);
+  background: var(--accent-dim);
+  border: 1px solid rgba(240,122,53,0.2);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Highlight row in modal */
+.modal__highlight {
+  background: rgba(240,122,53,0.06);
+  border: 1px solid rgba(240,122,53,0.18);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 16px;
+}
+.modal__highlight-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent-2);
+  margin-bottom: 8px;
+}
+.modal__highlight p {
+  font-size: 12.5px;
+  color: var(--text-2);
+  line-height: 1.65;
+}

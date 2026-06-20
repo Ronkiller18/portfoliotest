@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security — Rushikesh</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/security.css">
+</head>
+<body>
+<div class="pg-bg"></div>
+
+<nav class="pg-nav">
+  <a href="index.html" class="pg-nav__home">HOME</a>
+  <div class="pg-nav__title">
+    <div class="pg-nav__title-dot"></div>
+    Security
+  </div>
+  <div class="pg-nav__arrows">
+    <span class="pg-nav__arrow" style="opacity:0.3;cursor:default;">← Prev</span>
+    <a href="programming.html" class="pg-nav__arrow pg-nav__arrow--primary">Next →</a>
+  </div>
+</nav>
+
+<main class="pg-main">
+  <div class="pg-header">
+    <div class="pg-header__eyebrow">SECURITY WORK</div>
+    <h1 class="pg-header__title">Security Labs & Tools</h1>
+    <p class="pg-header__sub">Hands-on demonstrations of real client-side vulnerabilities — built to understand how attacks work, then how to stop them.</p>
+  </div>
+
+  <div class="card-grid">
+
+    <!-- ── Card: Security Tester ── -->
+    <div class="card">
+      <span class="card__tag">TOOL</span>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <div class="card__status"><span class="card__status-dot"></span>Live</div>
+        <span class="badge badge-high">HIGH complexity</span>
+      </div>
+      <div class="card__name">Client-Side Security Tester</div>
+      <div class="card__meta">Browser-based platform running 8 independent security analyzers with severity scoring and exportable reports — no backend required.</div>
+      <div class="card__tech">
+        <span class="card__tech-pill">JavaScript</span>
+        <span class="card__tech-pill">ES Modules</span>
+        <span class="card__tech-pill">HTML</span>
+        <span class="card__tech-pill">CSS</span>
+      </div>
+      <div class="card__actions">
+        <button class="card__btn" onclick="openPreview('https://ronkiller18.github.io/portfolio/projects/security-tester/')">Preview ↗</button>
+        <a href="https://ronkiller18.github.io/portfolio/projects/security-tester/" target="_blank" rel="noopener noreferrer" class="card__btn card__btn--accent">Live →</a>
+        <a href="https://github.com/Ronkiller18/portfolio/tree/main/projects/security-tester" target="_blank" rel="noopener noreferrer" class="card__btn">Code</a>
+        <button class="card__btn" onclick="openModal('security-tester')">Details ↓</button>
+      </div>
+    </div>
+
+    <!-- ── Card: Bug Bounty Lab ── -->
+    <div class="card">
+      <span class="card__tag">LAB</span>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <div class="card__status"><span class="card__status-dot"></span>Live</div>
+        <span class="badge badge-med">INTERMEDIATE</span>
+      </div>
+      <div class="card__name">Interactive Web Security Lab</div>
+      <div class="card__meta">Vulnerable and secure implementations side-by-side. Demonstrates XSS, open redirect, and clickjacking with CWE-mapped findings.</div>
+      <div class="card__tech">
+        <span class="card__tech-pill">JavaScript</span>
+        <span class="card__tech-pill">DOM APIs</span>
+        <span class="card__tech-pill">Regex</span>
+        <span class="card__tech-pill">HTML</span>
+      </div>
+      <div class="card__actions">
+        <button class="card__btn" onclick="openPreview('https://ronkiller18.github.io/portfolio/projects/bug-bounty-lab')">Preview ↗</button>
+        <a href="https://ronkiller18.github.io/portfolio/projects/bug-bounty-lab" target="_blank" rel="noopener noreferrer" class="card__btn card__btn--accent">Live →</a>
+        <a href="https://github.com/Ronkiller18/portfolio/tree/main/projects/bug-bounty-lab" target="_blank" rel="noopener noreferrer" class="card__btn">Code</a>
+        <button class="card__btn" onclick="openModal('bug-bounty-lab')">Details ↓</button>
+      </div>
+    </div>
+
+    <!-- ── Card: Auth Lab ── -->
+    <div class="card">
+      <span class="card__tag">LAB</span>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <div class="card__status"><span class="card__status-dot card__status-dot--wip"></span>In progress</div>
+        <span class="badge badge-med">INTERMEDIATE</span>
+      </div>
+      <div class="card__name">Authentication Vulnerability Lab</div>
+      <div class="card__meta">Simulates broken authentication and access control — weak login logic, insecure session storage, direct page bypass exploitable via DevTools.</div>
+      <div class="card__tech">
+        <span class="card__tech-pill">JavaScript</span>
+        <span class="card__tech-pill">localStorage</span>
+        <span class="card__tech-pill">DOM</span>
+        <span class="card__tech-pill">HTML</span>
+      </div>
+      <div class="card__actions">
+        <button class="card__btn" onclick="openPreview('https://ronkiller18.github.io/portfolio/projects/auth-lab/index.html')">Preview ↗</button>
+        <a href="https://ronkiller18.github.io/portfolio/projects/auth-lab/index.html" target="_blank" rel="noopener noreferrer" class="card__btn card__btn--accent">Live →</a>
+        <a href="https://github.com/Ronkiller18/portfolio/tree/main/projects/auth-lab" target="_blank" rel="noopener noreferrer" class="card__btn">Code</a>
+        <button class="card__btn" onclick="openModal('auth-lab')">Details ↓</button>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROJECT DETAIL TEMPLATES
+     Edit here to update modal content. No JS objects needed.
+════════════════════════════════════════════════════════ -->
+
+<template data-screenshot="assets/images/projects/screenshots/security-tester.png" id="detail-security-tester">
+  <div class="modal__tag">SECURITY TOOL</div>
+  <div class="modal__title">Client-Side Security Tester</div>
+  <div class="modal__desc">A browser-based educational security analysis platform running 8 independent analyzers against user-supplied input. Produces structured findings with severity scoring, remediation guidance, and exportable reports — entirely client-side.</div>
+
+  <div class="modal__screenshot-wrap" style="display:none;">
+    <img class="modal__screenshot-slot" src="" alt="">
+  </div>
+<div class="modal__section-title">KEY FEATURES</div>
+  <ul class="modal__bullets">
+    <li>XSS detection — script tags, event handlers, javascript: URIs, iframe injection</li>
+    <li>DOM sink analysis — flags innerHTML, eval(), document.write(), location.href</li>
+    <li>URL reputation — detects raw IPs, homograph characters, brand impersonation</li>
+    <li>JWT analyzer — checks for alg:none, missing expiry, sensitive payload data</li>
+    <li>CSP analyzer — flags unsafe-inline, unsafe-eval, wildcard sources</li>
+    <li>Cookie security — per-cookie checks for HttpOnly, Secure, SameSite</li>
+    <li>JSON export and formatted HTML security report generation</li>
+    <li>Live severity bar chart — pure CSS transition, no canvas or library</li>
+  </ul>
+
+  <div class="modal__section-title">IMPLEMENTATION</div>
+  <ul class="modal__bullets">
+    <li>Modular ES Module architecture — each analyzer is a pure function returning typed findings</li>
+    <li>Centralised findings store with severity-based risk scoring (High +40, Med +20, Low +10)</li>
+    <li>Reset callback registry — each tool registers its own clear function</li>
+    <li>Activity history with keyword search and match highlighting</li>
+    <li>All user input passes through escapeHTML() before any DOM insertion</li>
+    <li>No network requests — all analysis runs entirely in the browser</li>
+  </ul>
+
+  <div class="modal__note">
+    <div class="modal__note-title">🔐 SECURITY NOTES</div>
+    <p>All user input is escaped before DOM insertion. No data ever leaves the page. ES modules prevent global scope pollution. All outbound links use rel="noopener noreferrer".</p>
+  </div>
+
+  <div class="modal__actions">
+    <a href="https://ronkiller18.github.io/portfolio/projects/security-tester/" target="_blank" rel="noopener noreferrer" class="modal__link modal__link--accent">Live site →</a>
+    <a href="https://github.com/Ronkiller18/portfolio/tree/main/projects/security-tester" target="_blank" rel="noopener noreferrer" class="modal__link">View code</a>
+  </div>
+</template>
+
+<template data-screenshot="assets/images/projects/screenshots/bug-bounty-lab.png" id="detail-bug-bounty-lab">
+  <div class="modal__tag">SECURITY LAB</div>
+  <div class="modal__title">Interactive Web Security Lab</div>
+  <div class="modal__desc">An interactive lab demonstrating vulnerable and secure implementations side-by-side. Includes a rule-based detection engine for analyzing payloads with CWE-referenced findings and remediation guidance.</div>
+
+  <div class="modal__screenshot-wrap" style="display:none;">
+    <img class="modal__screenshot-slot" src="" alt="">
+  </div>
+<div class="modal__section-title">KEY FEATURES</div>
+  <ul class="modal__bullets">
+    <li>Stored XSS demonstration using vulnerable innerHTML rendering</li>
+    <li>Secure XSS implementation using safe DOM text rendering</li>
+    <li>Open Redirect vulnerability and whitelist-based mitigation</li>
+    <li>Clickjacking attack simulation with secure alternative</li>
+    <li>Rule-based payload analysis engine using regex detection</li>
+    <li>Security findings mapped to CWE references</li>
+    <li>Scan history tracking and dynamic vulnerability reporting</li>
+  </ul>
+
+  <div class="modal__section-title">IMPLEMENTATION</div>
+  <ul class="modal__bullets">
+    <li>Modular JavaScript architecture across multiple feature modules</li>
+    <li>Dynamic DOM generation and interactive UI rendering</li>
+    <li>Reusable detection rules for payload classification</li>
+    <li>Client-side input validation and URL parsing techniques</li>
+    <li>Application state managed for comments, scans, findings, and history</li>
+  </ul>
+
+  <div class="modal__note">
+    <div class="modal__note-title">🔐 SECURITY NOTES</div>
+    <p>Demonstrates XSS, open redirect, and clickjacking with educational breakdowns of each vulnerability pattern. Detection logic is heuristic — designed to teach, not replace professional tooling.</p>
+  </div>
+
+  <div class="modal__actions">
+    <a href="https://ronkiller18.github.io/portfolio/projects/bug-bounty-lab" target="_blank" rel="noopener noreferrer" class="modal__link modal__link--accent">Live site →</a>
+    <a href="https://github.com/Ronkiller18/portfolio/tree/main/projects/bug-bounty-lab" target="_blank" rel="noopener noreferrer" class="modal__link">View code</a>
+  </div>
+</template>
+
+<template data-screenshot="assets/images/projects/screenshots/auth-lab.png" id="detail-auth-lab">
+  <div class="modal__tag">SECURITY LAB</div>
+  <div class="modal__title">Authentication Vulnerability Lab</div>
+  <div class="modal__desc">Interactive client-side lab demonstrating authentication and access control flaws — weak login logic, insecure session storage, and direct page access bypass. All intentionally exploitable for learning.</div>
+
+  <div class="modal__screenshot-wrap" style="display:none;">
+    <img class="modal__screenshot-slot" src="" alt="">
+  </div>
+<div class="modal__section-title">KEY FEATURES</div>
+  <ul class="modal__bullets">
+    <li>Weak Authentication — login validation handled client-side, bypassable via DevTools</li>
+    <li>Session Manipulation — auth state in localStorage, can be modified manually</li>
+    <li>Broken Access Control — protected pages accessible without validation</li>
+    <li>Exploitation walkthrough using browser console and URL access</li>
+  </ul>
+
+  <div class="modal__section-title">IMPLEMENTATION</div>
+  <ul class="modal__bullets">
+    <li>Intentionally insecure client-side auth to demonstrate real vulnerabilities</li>
+    <li>Guided exploitation flow with clear attack steps</li>
+    <li>Side-by-side comparison of vulnerable vs. secure patterns</li>
+  </ul>
+
+  <div class="modal__note">
+    <div class="modal__note-title">🔐 SECURITY NOTES</div>
+    <p>Client-side authentication is inherently insecure. localStorage should never store sensitive session control. Access control must be enforced server-side. This project intentionally demonstrates insecure patterns for learning purposes.</p>
+  </div>
+
+  <div class="modal__actions">
+    <a href="https://ronkiller18.github.io/portfolio/projects/auth-lab/index.html" target="_blank" rel="noopener noreferrer" class="modal__link modal__link--accent">Live site →</a>
+    <a href="https://github.com/Ronkiller18/portfolio/tree/main/projects/auth-lab" target="_blank" rel="noopener noreferrer" class="modal__link">View code</a>
+  </div>
+</template>
+
+<!-- ── Modal shell ─────────────────────────────────────── -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal__close" onclick="closeModal()">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
