@@ -1,72 +1,88 @@
-# Assets
+# Rushikesh Patil — Portfolio
 
-All static assets for the portfolio site live here.
-Nothing image-related should be hardcoded into HTML or CSS — reference from this folder instead.
+Personal portfolio site showcasing security labs, programming projects, and experiments.
+
+**Live site → [ronkiller18.github.io/portfolio](https://ronkiller18.github.io/portfolio/)**
 
 ---
 
-## Folder structure
+## Pages
+
+| Page | URL | Description |
+|------|-----|-------------|
+| Home | `/` | About, skills, contact, D20 fact roller |
+| Security | `/security.html` | XSS labs, auth lab, security tester tool |
+| Programming | `/programming.html` | LockBox password manager, this portfolio |
+| Other | `/other.html` | Games and experiments |
+
+Each project page has its own color theme — indigo for security, amber for programming, neon for other.
+
+---
+
+## Tech
+
+- Vanilla HTML, CSS, JavaScript — no frameworks, no build tools
+- Hosted on GitHub Pages
+- Zero dependencies
+
+---
+
+## Structure
 
 ```
-assets/
-├── images/
-│   ├── projects/
-│   │   ├── screenshots/     ← full-page or cropped screenshots of your projects
-│   │   │                       naming: <project-slug>.png  e.g. lockbox.png
-│   │   │
-│   │   └── previews/        ← smaller card-preview thumbnails (used in card grid)
-│   │                           naming: <project-slug>-preview.png  e.g. lockbox-preview.png
-│   │                           recommended size: 640×400 px
-│   │
-│   └── ui/
-│       └── placeholder.svg  ← shown automatically when a screenshot is missing
+portfolio/
+├── index.html            ← Home page
+├── security.html         ← Security projects
+├── programming.html      ← Programming projects
+├── other.html            ← Other / games
 │
-├── icons/                   ← any custom SVG icons (favicon, social, etc.)
+├── css/
+│   ├── base.css          ← Shared layout, cards, modal, nav
+│   ├── home.css          ← Home page styles
+│   ├── security.css      ← Indigo/blue theme
+│   ├── programming.css   ← Amber/orange theme
+│   └── other.css         ← Neon theme
 │
-└── fonts/                   ← self-hosted fonts if you add any later
+├── js/
+│   ├── main.js           ← Shared logic (modal close, ESC, keyboard)
+│   ├── projects.js       ← Modal renderer + preview iframe overlay
+│   └── home.js           ← D20 dice roller
+│
+└── assets/
+    ├── README.md         ← How to add screenshots (read this)
+    └── images/
+        ├── projects/
+        │   ├── screenshots/   ← WebP screenshots used in modals
+        │   └── previews/      ← Card thumbnails (future use)
+        └── ui/
+            └── placeholder.svg
 ```
 
 ---
 
-## How to add a project screenshot
+## Running locally
 
-1. Take a screenshot of your project (browser window or cropped content)
-2. Save it as PNG: `assets/images/projects/screenshots/<project-slug>.png`
-3. For the card preview thumbnail, save a smaller/cropped version:
-   `assets/images/projects/previews/<project-slug>-preview.png`
-4. In `js/projects.js`, update the project's `screenshot` and `preview` fields:
+No server needed — just open `index.html` in a browser.
 
-```js
-const projects = {
-  'security-tester': {
-    screenshot: 'assets/images/projects/screenshots/security-tester.png',
-    preview:    'assets/images/projects/previews/security-tester-preview.png',
-    // ...
-  }
-}
-```
-
-If no screenshot is provided, the site automatically falls back to `assets/images/ui/placeholder.svg`.
+If you use VS Code, the **Live Server** extension gives you hot reload:
+1. Install Live Server from the Extensions panel
+2. Right-click `index.html` → Open with Live Server
 
 ---
 
-## Project slugs (current)
+## Adding a project
 
-| Project                     | Slug                | Page               |
-|-----------------------------|---------------------|--------------------|
-| Client-Side Security Tester | `security-tester`   | security.html      |
-| Interactive Web Security Lab| `bug-bounty-lab`    | security.html      |
-| Authentication Lab          | `auth-lab`          | security.html      |
-| LockBox                     | `lockbox`           | programming.html   |
-| Portfolio Website           | `portfolio`         | programming.html   |
-| Browser Game                | `browser-game`      | other.html         |
+1. Add a card in the relevant HTML page (security / programming / other)
+2. Add a `<template id="detail-your-slug">` block below the card grid with the project details
+3. Add screenshots to `assets/images/projects/screenshots/` (WebP, 60% quality)
+4. Reference them with `data-screenshots="path1.webp,path2.webp"` on the template tag
+
+Full screenshot instructions in [`assets/README.md`](assets/README.md).
 
 ---
 
-## Recommended screenshot sizes
+## Contact
 
-| Use              | Size       | Format |
-|------------------|------------|--------|
-| Card preview     | 640×400 px | PNG    |
-| Modal screenshot | 1280×800 px| PNG    |
-| Favicon          | 32×32 px   | PNG/SVG|
+- Email — Rushikesh8021@gmail.com
+- LinkedIn — [iamrushikeshpatil](https://www.linkedin.com/in/iamrushikeshpatil/)
+- GitHub — [Ronkiller18](https://github.com/Ronkiller18)

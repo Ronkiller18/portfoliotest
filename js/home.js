@@ -75,3 +75,24 @@ function rollDie() {
     }
   }, 65);
 }
+
+// ─── Email copy ────────────────────────────────────────────
+function copyEmail(btn) {
+  const email = 'Rushikesh8021@gmail.com';
+  const label = btn.querySelector('.email-label');
+
+  navigator.clipboard.writeText(email).then(() => {
+    const original = label.textContent;
+    label.textContent = 'Copied!';
+    btn.style.borderColor = 'var(--accent)';
+    btn.style.color = 'var(--text)';
+    setTimeout(() => {
+      label.textContent = original;
+      btn.style.borderColor = '';
+      btn.style.color = '';
+    }, 2000);
+  }).catch(() => {
+    // Clipboard API blocked — fall back to mailto
+    window.location.href = 'mailto:' + email;
+  });
+}

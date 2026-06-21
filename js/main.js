@@ -24,7 +24,4 @@ function toggleExpand(btn) {
   expand.classList.toggle('open', !isOpen);
   btn.textContent = isOpen ? 'Details ↓' : 'Details ↑';
 }
-
-function openPreview(url) {
-  window.open(url, '_blank', 'noopener,noreferrer');
-}
+// openPreview lives in projects.js — do NOT define it here

@@ -380,6 +380,48 @@ img { display: block; max-width: 100%; }
 .modal__link--accent { background: var(--accent); color: #fff; border-color: transparent; }
 .modal__link--accent:hover { opacity: 0.85; color: #fff; }
 
+
+/* ─── Screenshot gallery (in modal) ────────────────────── */
+.modal__screenshot-wrap { display: none; margin: 18px 0; }
+
+.ss-main-wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+}
+.ss-main {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.ss-strip {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.ss-thumb {
+  width: 72px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity .2s, border-color .2s;
+}
+.ss-thumb:hover { opacity: 0.85; }
+.ss-thumb--active { opacity: 1; border-color: var(--accent); }
+
+/* Single screenshot (no gallery) */
+.modal__screenshot-slot {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: block;
+}
 /* ─── Scrollbar ─────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
