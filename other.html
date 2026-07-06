@@ -38,8 +38,29 @@
         <div class="card__status"><span class="card__status-dot card__status-dot--wip"></span>In development</div>
         <span class="wip-label">WIP</span>
       </div>
-      <div class="card__name">Browser Game</div>
+      <div class="card__name">ASHEN REQUIEM-Browser Game</div>
       <div class="card__meta">A lightweight offline browser game focused on simple mechanics and smooth performance. Designed to run well on low-end devices.</div>
+      <div class="card__tech">
+        <span class="card__tech-pill">HTML</span>
+        <span class="card__tech-pill">CSS</span>
+        <span class="card__tech-pill">JavaScript</span>
+      </div>
+      <div class="card__actions">
+        <button class="card__btn" style="grid-column:1/-1;" onclick="openModal('ashenrequiem')">Show details ↓</button>
+        <a href="https://github.com/Ronkiller18/ASHEN-REQUIEM" target="_blank" rel="noopener noreferrer" class="card__btn">Code</a>
+        <span class="card__btn" style="cursor:default;opacity:0.4;">Desktop only</span>
+      </div>
+    </div>
+
+    <!-- ── Card: Godot Game ── -->
+    <div class="card">
+      <span class="card__tag fun-tag-mint">GAME</span>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div class="card__status"><span class="card__status-dot card__status-dot--wip"></span>In development</div>
+        <span class="wip-label">WIP</span>
+      </div>
+      <div class="card__name">Godot Game</div>
+      <div class="card__meta">A lightweight offline game focused on simple mechanics and smooth performance. Designed to run well on low-end devices.</div>
       <div class="card__tech">
         <span class="card__tech-pill">HTML</span>
         <span class="card__tech-pill">CSS</span>
@@ -48,7 +69,7 @@
       <div class="card__actions">
         <span class="card__btn" style="cursor:default;opacity:0.4;grid-column:1/-1;">Coming soon</span>
       </div>
-    </div>
+    </div>     
 
     <!-- ── Placeholder slot ── -->
     <div class="card" style="opacity:0.35;pointer-events:none;">
@@ -65,6 +86,46 @@
   </div>
 </main>
 
+<!-- ═══════════════════════════════════════════════════════
+     PROJECT DETAIL TEMPLATES
+════════════════════════════════════════════════════════ -->
+<template data-screenshot="assets/images/projects/screenshots/other/ashenrequiem/AshenRequiemmenu.webp,assets/images/projects/screenshots/other/ashenrequiem/AshenRequiemplay1.webp,assets/images/projects/screenshots/other/ashenrequiem/AshenRequiemBoss.webp" id="detail-ashenrequiem">
+  <div class="modal__tag">GAME · BROWSER</div>
+  <div class="modal__title">ASHEN REQUIEM — Browser Game</div>
+  <div class="modal__desc">A dark, Souls-inspired 2D side-scroller built to run entirely in the browser with no installs and no dependencies beyond a canvas. Focused on tight, readable combat and smooth performance on low-end devices.</div>
+
+  <div class="modal__screenshot-wrap" style="display:none;">
+    <img class="modal__screenshot-slot" src="" alt="">
+  </div>
+
+  <div class="modal__section-title">KEY FEATURES</div>
+  <ul class="modal__bullets">
+    <li>Full movement/combat kit — walk, run, double jump, dodge-roll with i-frames, block, crouch</li>
+    <li>Three distinct enemy types, each with its own AI and counterplay: melee, ranged projectile mage, and a heavy ground-sweeping brute</li>
+    <li>Telegraphed attacks with real counterplay — duck under sweeps, jump or crouch to dodge fixed-height projectiles</li>
+    <li>Multi-phase boss fight with escalating aggression and a dedicated ground-sweep attack that mirrors the brute's dodge timing</li>
+    <li>Unlockable "Divine Aegis" invulnerability ability, gated behind a hidden chest at the end of the level</li>
+    <li>Live HUD with animated HP hearts and a combo counter</li>
+  </ul>
+
+  <div class="modal__section-title">IMPLEMENTATION</div>
+  <ul class="modal__bullets">
+    <li>Built on Phaser 3 with Arcade Physics — custom finite-state machines drive the player, each enemy type, and the boss</li>
+    <li>Modular scene architecture (Boot → Menu → Game → Boss → Game Over) with a shared UI scene</li>
+    <li>Hand-tuned hitboxes and windup timing so every attack is dodgeable on reaction, not memorization</li>
+    <li>Custom sprite pipeline — background removal, edge decontamination, and frame-gutter spacing to keep animations clean at any scale</li>
+    <li>Vite-based build for fast local iteration</li>
+  </ul>
+
+  <div class="modal__note">
+    <div class="modal__note-title">🎮 DESIGN NOTE</div>
+    <p>Currently a single full level — three enemy encounters, an ability-unlock chest, and a two-phase boss fight — built as a foundation for further levels and enemy types. Actively in development.</p>
+  </div>
+
+  <div class="modal__actions">
+    <a href="#" target="_blank" rel="noopener noreferrer" class="modal__link modal__link--accent"><!-- TODO: add GitHub link -->View code →</a>
+  </div>
+</template>
 <!-- Templates ready for when projects are added -->
 
 <!-- ── Modal shell ─────────────────────────────────────── -->
