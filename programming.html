@@ -39,7 +39,8 @@
         <span class="test-badge">55 tests</span>
       </div>
       <div class="card__name">LockBox — Password Manager</div>
-      <div class="card__meta">Full-stack desktop application with AES-256 encryption and offline-first architecture. Zero-knowledge design — master password never stored.</div>
+      <div class="card__meta">Full-stack desktop application with AES-256 encryption and offline-first architecture.
+         Zero-knowledge design — master password never stored.</div>
       <div class="card__tech">
         <span class="card__tech-pill">Python</span>
         <span class="card__tech-pill">FastAPI</span>
@@ -59,6 +60,38 @@
         <button class="card__btn" style="grid-column:1/-1;" onclick="openModal('lockbox')">Show details ↓</button>
         <a href="https://github.com/Ronkiller18/lockbox" target="_blank" rel="noopener noreferrer" class="card__btn">Code</a>
         <span class="card__btn" style="cursor:default;opacity:0.4;">Desktop only</span>
+      </div>
+    </div>
+
+    <!-- ── Card: Media Toolkit ── -->
+    <div class="card">
+      <span class="card__tag">FRONTEND</span>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <div class="card__status"><span class="card__status-dot"></span>Live · Deployed</div>
+      </div>
+      <div class="card__name">Media Toolkit</div>
+      <div class="card__meta">Browser-based toolkit for cropping/compressing images, trimming and compressing audio, and merging/splitting PDFs — 
+        entirely client-side. No backend, no uploads, your files never leave your device.</div>
+      <div class="card__tech">
+        <span class="card__tech-pill">Vite</span>
+        <span class="card__tech-pill">TailwindCSS</span>
+        <span class="card__tech-pill">FFmpeg.wasm</span>
+        <span class="card__tech-pill">Cropper.js</span>
+        <span class="card__tech-pill">WaveSurfer.js</span>
+        <span class="card__tech-pill">PDF-lib</span>
+      </div>
+      <div style="margin-top:4px;">
+        <div class="stack-depth__label" style="font-size:10px;color:var(--text-3);margin-bottom:4px;">Stack depth</div>
+        <div class="stack-depth">
+          <div class="stack-depth__bar"><div class="stack-depth__fill" style="width:85%;"></div></div>
+          <span class="stack-depth__label">Advanced</span>
+        </div>
+      </div>
+      <div class="card__actions">
+        <button class="card__btn" onclick="openPreview('https://ronkiller18.github.io/media-toolkit/')">Preview ↗</button>
+        <a href="https://ronkiller18.github.io/media-toolkit/" target="_blank" rel="noopener noreferrer" class="card__btn card__btn--accent">Live →</a>
+        <a href="https://github.com/Ronkiller18/media-toolkit" target="_blank" rel="noopener noreferrer" class="card__btn">Code</a>
+        <button class="card__btn" onclick="openModal('mediatoolkit')">Details ↓</button>
       </div>
     </div>
 
@@ -90,6 +123,18 @@
       </div>
     </div>
 
+    <!-- ── Placeholder slot ── -->
+    <div class="card" style="opacity:0.35;pointer-events:none;">
+      <span class="card__tag fun-tag-magenta">EXPERIMENT</span>
+      <div class="card__status"><span class="card__status-dot card__status-dot--wip"></span>Planned</div>
+      <div class="card__name">Next Experiment</div>
+      <div class="card__meta">Something new is being built here. Check back soon.</div>
+      <div class="card__tech"><span class="card__tech-pill">TBD</span></div>
+      <div class="card__actions">
+        <span class="card__btn" style="cursor:default;grid-column:1/-1;">Coming soon</span>
+      </div>
+    </div>    
+
   </div>
 </main>
 
@@ -97,15 +142,18 @@
      PROJECT DETAIL TEMPLATES
 ════════════════════════════════════════════════════════ -->
 
-<template data-screenshot="assets/images/projects/screenshots/programming/lockbox/lockboxlogin.webp,assets/images/projects/screenshots/programming/lockbox/lockboxhome.webp,assets/images/projects/screenshots/programming/lockbox/lockboxsetting.webp" id="detail-lockbox">
+<template data-screenshot="assets/images/projects/screenshots/programming/lockbox/lockboxlogin.webp,
+ assets/images/projects/screenshots/programming/lockbox/lockboxhome.webp,
+ assets/images/projects/screenshots/programming/lockbox/lockboxsetting.webp" id="detail-lockbox">
   <div class="modal__tag">FULL STACK · DESKTOP APP</div>
   <div class="modal__title">LockBox — Password Manager</div>
-  <div class="modal__desc">Full-stack desktop application with AES-256 encryption and offline-first architecture. Zero-knowledge design — master password never stored anywhere. Built as a daily-use tool where every decision prioritised security over convenience.</div>
+  <div class="modal__desc">Full-stack desktop application with AES-256 encryption and offline-first architecture.
+     Zero-knowledge design — master password never stored anywhere. Built as a daily-use tool where every decision prioritised security over convenience.</div>
 
   <div class="modal__screenshot-wrap" style="display:none;">
     <img class="modal__screenshot-slot" src="" alt="">
   </div>
-<div class="modal__section-title">KEY FEATURES</div>
+  <div class="modal__section-title">KEY FEATURES</div>
   <ul class="modal__bullets">
     <li>AES-256 encrypted vault with PBKDF2 at 600,000 iterations</li>
     <li>Zero-knowledge design — master password never stored anywhere</li>
@@ -130,7 +178,8 @@
 
   <div class="modal__note">
     <div class="modal__note-title">🔐 SECURITY NOTES</div>
-    <p>AES-256-CBC + HMAC-SHA256 via Python cryptography library. PBKDF2-HMAC-SHA256 with 600,000 iterations. vault.enc excluded from version control. All device traffic encrypted via Tailscale WireGuard.</p>
+    <p>AES-256-CBC + HMAC-SHA256 via Python cryptography library. PBKDF2-HMAC-SHA256 with 600,000 iterations. 
+      vault.enc excluded from version control. All device traffic encrypted via Tailscale WireGuard.</p>
   </div>
 
   <div class="modal__actions">
@@ -138,15 +187,57 @@
   </div>
 </template>
 
+<template data-screenshot="assets/images/projects/screenshots/programming/media-toolkit/Media Toolkit Dashboard.webp,
+  assets/images/projects/screenshots/programming/media-toolkit/Media Toolkit Image.webp,
+  assets/images/projects/screenshots/programming/media-toolkit/Media Toolkit Audio.webp,
+  assets/images/projects/screenshots/programming/media-toolkit/Media Toolkit Pdf.webp" id="detail-mediatoolkit">
+  <div class="modal__tag">FRONTEND · BROWSER APP</div>
+  <div class="modal__title">Media Toolkit</div>
+  <div class="modal__desc">A browser-based file toolkit for images, audio, and PDFs — crop, resize, compress, convert, trim, merge, 
+    split, and rotate, all running entirely client-side. No backend, no server, no uploads.</div>
+ 
+  <div class="modal__screenshot-wrap" style="display:none;">
+    <img class="modal__screenshot-slot" src="" alt="">
+  </div>
+  <div class="modal__section-title">KEY FEATURES</div>
+  <ul class="modal__bullets">
+    <li>Image: crop (free/square/16:9/custom ratio), resize, quality compression, JPG/PNG/WEBP conversion, batch upload with ZIP export</li>
+    <li>Audio: bitrate compression, zoomable waveform, trim to a range or remove multiple arbitrary sections, extract audio from video (MP4/MOV/WEBM)</li>
+    <li>PDF: merge with drag-to-reorder, split by page range or into individual pages, rotate and delete pages, live page thumbnails</li>
+    <li>Real progress bars on long-running operations, listen/preview before committing to a download</li>
+    <li>Dark/light mode and last-used settings (quality, bitrate) persisted across visits</li>
+  </ul>
+ 
+  <div class="modal__section-title">IMPLEMENTATION</div>
+  <ul class="modal__bullets">
+    <li>Vanilla JavaScript (no framework) + Vite, hash-based routing for static GitHub Pages hosting</li>
+    <li>Every heavy dependency (FFmpeg.wasm, pdf.js, PDF-lib, JSZip) is lazy-loaded at the exact moment it's needed, not on page load</li>
+    <li>FFmpeg.wasm runs real FFmpeg commands (compiled to WebAssembly) for audio compression, trimming, and multi-section removal via filter graphs</li>
+    <li>Object URLs and library instances are explicitly cleaned up on navigation to prevent memory leaks during long sessions</li>
+    <li>Single source-of-truth color/theme system shared between Tailwind config and runtime JS</li>
+  </ul>
+ 
+  <div class="modal__note">
+    <div class="modal__note-title">🔐 SECURITY NOTES</div>
+    <p>All processing happens entirely in the browser — files are read locally via the File API and never transmitted anywhere. No backend, no network requests carrying user data, no analytics on file contents.</p>
+  </div>
+ 
+  <div class="modal__actions">
+    <a href="https://ronkiller18.github.io/media-toolkit/" target="_blank" rel="noopener noreferrer" class="modal__link modal__link--accent">Live site →</a>
+    <a href="https://github.com/Ronkiller18/media-toolkit" target="_blank" rel="noopener noreferrer" class="modal__link">View code</a>
+  </div>
+</template>
+
 <template data-screenshot="assets/images/projects/screenshots/portfolio.png" id="detail-portfolio">
   <div class="modal__tag">FRONTEND</div>
   <div class="modal__title">Portfolio Website</div>
-  <div class="modal__desc">This portfolio — a multi-page static site with per-section color theming, a project modal system powered by HTML templates, and an interactive D20 dice widget.</div>
+  <div class="modal__desc">This portfolio — a multi-page static site with per-section color theming,
+     a project modal system powered by HTML templates, and an interactive D20 dice widget.</div>
 
   <div class="modal__screenshot-wrap" style="display:none;">
     <img class="modal__screenshot-slot" src="" alt="">
   </div>
-<div class="modal__section-title">KEY FEATURES</div>
+  <div class="modal__section-title">KEY FEATURES</div>
   <ul class="modal__bullets">
     <li>Multi-page architecture with per-page color accent system</li>
     <li>Modal project detail viewer driven by HTML &lt;template&gt; tags</li>
@@ -167,7 +258,8 @@
 
   <div class="modal__note">
     <div class="modal__note-title">🔐 SECURITY NOTES</div>
-    <p>Static content reduces attack surface. No user input stored or processed. External links use rel="noopener noreferrer". Template cloning avoids innerHTML with user content.</p>
+    <p>Static content reduces attack surface. No user input stored or processed.
+       External links use rel="noopener noreferrer". Template cloning avoids innerHTML with user content.</p>
   </div>
 
   <div class="modal__actions">

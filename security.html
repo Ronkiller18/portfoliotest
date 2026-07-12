@@ -108,15 +108,17 @@
      Edit here to update modal content. No JS objects needed.
 ════════════════════════════════════════════════════════ -->
 
-<template data-screenshots="assets/images/projects/screenshots/security/Client-Side Security Tester Dashboard.webp,assets/images/projects/screenshots/security/Client-Side Security Tester Documentation.webp " id="detail-security-tester">
+<template data-screenshots="assets/images/projects/screenshots/security/Client-Side Security Tester Dashboard.webp,
+  assets/images/projects/screenshots/security/Client-Side Security Tester Documentation.webp " id="detail-security-tester">
   <div class="modal__tag">SECURITY TOOL</div>
   <div class="modal__title">Client-Side Security Tester</div>
-  <div class="modal__desc">A browser-based educational security analysis platform running 8 independent analyzers against user-supplied input. Produces structured findings with severity scoring, remediation guidance, and exportable reports — entirely client-side.</div>
+  <div class="modal__desc">A browser-based educational security analysis platform running 8 independent analyzers against user-supplied input. 
+    Produces structured findings with severity scoring, remediation guidance, and exportable reports — entirely client-side.</div>
 
   <div class="modal__screenshot-wrap" style="display:none;">
     <img class="modal__screenshot-slot" src="" alt="">
   </div>
-<div class="modal__section-title">KEY FEATURES</div>
+  <div class="modal__section-title">KEY FEATURES</div>
   <ul class="modal__bullets">
     <li>XSS detection — script tags, event handlers, javascript: URIs, iframe injection</li>
     <li>DOM sink analysis — flags innerHTML, eval(), document.write(), location.href</li>
@@ -140,7 +142,8 @@
 
   <div class="modal__note">
     <div class="modal__note-title">🔐 SECURITY NOTES</div>
-    <p>All user input is escaped before DOM insertion. No data ever leaves the page. ES modules prevent global scope pollution. All outbound links use rel="noopener noreferrer".</p>
+    <p>All user input is escaped before DOM insertion. No data ever leaves the page. 
+      ES modules prevent global scope pollution. All outbound links use rel="noopener noreferrer".</p>
   </div>
 
   <div class="modal__actions">
@@ -149,15 +152,17 @@
   </div>
 </template>
 
-<template data-screenshots="assets/images/projects/screenshots/security/Mini Bug Bounty Lab home.webp,assets/images/projects/screenshots/security/Mini Bug Bounty Lab scanner.webp" id="detail-bug-bounty-lab">
+<template data-screenshots="assets/images/projects/screenshots/security/Mini Bug Bounty Lab home.webp,
+  assets/images/projects/screenshots/security/Mini Bug Bounty Lab scanner.webp" id="detail-bug-bounty-lab">
   <div class="modal__tag">SECURITY LAB</div>
   <div class="modal__title">Interactive Web Security Lab</div>
-  <div class="modal__desc">An interactive lab demonstrating vulnerable and secure implementations side-by-side. Includes a rule-based detection engine for analyzing payloads with CWE-referenced findings and remediation guidance.</div>
+  <div class="modal__desc">An interactive lab demonstrating vulnerable and secure implementations side-by-side. 
+    Includes a rule-based detection engine for analyzing payloads with CWE-referenced findings and remediation guidance.</div>
 
   <div class="modal__screenshot-wrap" style="display:none;">
     <img class="modal__screenshot-slot" src="" alt="">
   </div>
-<div class="modal__section-title">KEY FEATURES</div>
+  <div class="modal__section-title">KEY FEATURES</div>
   <ul class="modal__bullets">
     <li>Stored XSS demonstration using vulnerable innerHTML rendering</li>
     <li>Secure XSS implementation using safe DOM text rendering</li>
@@ -179,7 +184,8 @@
 
   <div class="modal__note">
     <div class="modal__note-title">🔐 SECURITY NOTES</div>
-    <p>Demonstrates XSS, open redirect, and clickjacking with educational breakdowns of each vulnerability pattern. Detection logic is heuristic — designed to teach, not replace professional tooling.</p>
+    <p>Demonstrates XSS, open redirect, and clickjacking with educational breakdowns of each vulnerability pattern. 
+      Detection logic is heuristic — designed to teach, not replace professional tooling.</p>
   </div>
 
   <div class="modal__actions">
@@ -188,15 +194,17 @@
   </div>
 </template>
 
-<template data-screenshots="assets/images/projects/screenshots/security/Auth Lab - Login.webp,assets/images/projects/screenshots/security/Auth Lab - Dashboard.webp" id="detail-auth-lab">
+<template data-screenshots="assets/images/projects/screenshots/security/Auth Lab - Login.webp,
+  assets/images/projects/screenshots/security/Auth Lab - Dashboard.webp" id="detail-auth-lab">
   <div class="modal__tag">SECURITY LAB</div>
   <div class="modal__title">Authentication Vulnerability Lab</div>
-  <div class="modal__desc">Interactive client-side lab demonstrating authentication and access control flaws — weak login logic, insecure session storage, and direct page access bypass. All intentionally exploitable for learning.</div>
+  <div class="modal__desc">Interactive client-side lab demonstrating authentication and access control flaws — 
+    weak login logic, insecure session storage, and direct page access bypass. All intentionally exploitable for learning.</div>
 
   <div class="modal__screenshot-wrap" style="display:none;">
     <img class="modal__screenshot-slot" src="" alt="">
   </div>
-<div class="modal__section-title">KEY FEATURES</div>
+  <div class="modal__section-title">KEY FEATURES</div>
   <ul class="modal__bullets">
     <li>Weak Authentication — login validation handled client-side, bypassable via DevTools</li>
     <li>Session Manipulation — auth state in localStorage, can be modified manually</li>
@@ -213,7 +221,8 @@
 
   <div class="modal__note">
     <div class="modal__note-title">🔐 SECURITY NOTES</div>
-    <p>Client-side authentication is inherently insecure. localStorage should never store sensitive session control. Access control must be enforced server-side. This project intentionally demonstrates insecure patterns for learning purposes.</p>
+    <p>Client-side authentication is inherently insecure. localStorage should never store sensitive session control. 
+      Access control must be enforced server-side. This project intentionally demonstrates insecure patterns for learning purposes.</p>
   </div>
 
   <div class="modal__actions">
